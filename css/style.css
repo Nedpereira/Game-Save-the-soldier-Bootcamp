@@ -1,0 +1,266 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400&display=swap');
+
+
+body{
+  background-color: rgb(46, 46, 46);
+
+}
+
+#inicio{
+    font-family: 'Fredoka', sans-serif;
+    font-size:20px;
+    text-align: center;
+    color: rgb(59, 59, 59);;
+}
+/* imagem helicóptero */
+.logo{
+
+    height: 50px;
+    width: 50px;
+    display: inline-block;
+    text-align: center;
+
+}
+
+#jogo{
+    width:950px;
+	height:auto;
+	position:relative;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+#fundoGame{
+    width:950px;
+	height:600px;
+	border-color:#FFF;
+    background-image: url(/img/fundo_game.jpg);
+    background-size: 1380px;
+	border-style:solid;
+    text-align: center;
+}
+
+#inimigo2 {
+	width: 330px;
+	height: 200px;
+	position: absolute;
+	left: 600px;
+	top: 405px;
+	background-image: url(/img/inimigo2.png);
+}
+
+/* helicóptero inimigo */
+#inimigo1 {
+	width: 300px;
+	height: 200px;
+	position: absolute;
+	left: 650px;
+	top: 150px;
+	background-image:url(/img/inimigo1.png);
+}
+
+/* helicóptero */
+#jogador {
+	width:280px;
+	height:200px;
+	position:absolute;
+	left:0px;
+	top:150px;
+background-image:url(/img/apache.png);
+}
+
+/* soldado */
+#amigo { 
+	width:80px;
+	height:100px;
+	position:absolute;
+	left:8px;
+	top:500px;
+    background-image:url(/img/amigo.png);
+}
+
+
+/* Botao start */
+.botao{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    cursor: pointer;
+
+  }
+  
+  a{
+    display: block;
+    width: 150px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 18px;
+    font-family: sans-serif;
+    text-decoration: none;
+    color: rgb(90, 88, 88);
+    border: 2px solid rgb(121, 121, 121);
+    letter-spacing: 2px;
+    text-align: center;
+    position: relative;
+    transition: all .35s;
+  }
+  
+  a span{
+    position: relative;
+    z-index: 2;
+  }
+  
+  a:after{
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #ff003b;
+    transition: all .35s;
+  }
+  
+  a:hover{
+    color: #fff;
+  }
+  
+  a:hover:after{
+    width: 100%;
+  }
+  /* fim botao start */
+
+  /* animação helicoptero inimigo */
+ 
+ .anima2{
+   background-image: url(/img/inimigo1.png);
+   animation: play .3s steps(2) infinite;
+ }
+
+ @keyframes play{
+  from {background-position:0px;}
+	to {background-position:-600px;}
+ }
+
+ /* fim animação helicóptero inimigo */
+
+ /* animação helicóptero amigo */
+
+ .anima1{
+   background-image: url(/img/apache.png);
+   animation: play2 .5s steps(3) infinite;
+ }
+
+ @keyframes play2 {
+   from {background-position:0px;}
+   to {background-position:-900px;}
+
+ }
+
+ /* fim animação helicóptero amigo */
+
+ /* amigo */
+
+ .anima3{
+  background-image: url(/img/amigo.png);
+  animation: play1 2.1s steps(7) infinite;
+ }
+
+ @keyframes play1{
+   from {background-position:0px;}
+   to {background-position:-700px;}
+ }
+
+ /* fim amigo */
+
+ /* tiro */
+
+ #disparo {
+	width: 50px;
+	height: 8px;
+	position: absolute;
+	background-image: url(/img/disparo.png);
+}
+
+#explosao1 {
+	width:15px;
+	height:87px;
+	position:absolute;
+
+}
+
+#explosao2 {
+	width:15px;
+	height:87px;
+	position:absolute;
+	
+}
+
+#explosao3 {
+	width:44px;
+	height:51px;
+	position:absolute;
+}
+
+.anima4 {
+	width:44px;
+	height:51px;
+	background-image:url(/img/amigo_morte.png);
+	animation:play3 .5s steps(7) infinite;
+	-webkit-animation: play3 .5s steps(7) infinite;
+       -moz-animation: play3 .5s steps(7) infinite;
+        -ms-animation: play3 .5s steps(7) infinite;
+         -o-animation: play3 .5s steps(7) infinite;
+}
+
+@keyframes play3 {
+	from {background-position:0px;}
+	to {background-position:-308px;}
+}
+
+#placar {
+	width: 450px;
+	height: 50px;
+	position: absolute;
+	left: 5px;
+	top: 590px;
+}
+
+h2 {
+	font-family: 'Fredoka';
+	font-size:20px;
+	color:#FFF
+}
+
+#energia {
+	width: 140px;
+	height: 38px;
+	position: absolute;
+	left: 750px;
+	top: 7px;	
+}
+
+h3 {
+	font-family:'Fredoka';
+	font-size:20px;
+	color:#ff003b;
+
+}
+
+#fim {
+  font-family:'Fredoka';
+	width:350px;
+	height:200px;
+	background-color:rgb(247, 246, 246);
+ 	margin-left:auto;
+  margin-right:auto;
+ 	margin-top:100px;
+   border-radius: 40px;
+	text-align:center;
+	padding:10px;
+
+}
+
+
